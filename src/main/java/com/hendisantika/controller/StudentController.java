@@ -33,7 +33,7 @@ public class StudentController {
         binder.setValidator(studentValidator);
     }
 
-    @PostMapping("/student")
+    @PostMapping("student")
     public ResponseEntity<Student> saveStudent(@RequestBody @Valid Student student) {
         // Other logic here(Calling the service layer,etc.)
         return new ResponseEntity<>(student, HttpStatus.CREATED);
